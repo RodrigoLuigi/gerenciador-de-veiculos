@@ -11,7 +11,7 @@ const port = 3000; //porta padrão
 app.use(express.json());
 
 app.use((req, res, next) => {
-    console.log('Acessou o Middlewere!');
+   // console.log('Acessou o Middlewere!');
     res.header("Access-Control-Allow-Origin", "*");
     app.use(cors());
     next();
@@ -36,7 +36,7 @@ console.log('API funcionando!');
 
 // GET 'veiculos' traz toda a lista de veiculos cadastrado no DB
 app.get('/veiculos', async function (req, res) {
-    const veiculos = await db.selectCustomers();
+    const veiculos = await db.selectVehicles();
     res.json(veiculos);
 });
 
@@ -45,7 +45,7 @@ app.get('/veiculos/:id', async function (req, res) {
     const {
         id
     } = req.params;
-    const veiculos = await db.selectCustomer(id);
+    const veiculos = await db.selectVehicle(id);
 
     if (!veiculos[0]) {
         return res.status(204).json();
@@ -66,7 +66,7 @@ app.post('/veiculos', async function (req, res) {
     } = req.body;
 
     //salvar novo veiculo
-    await db.insertCustomer({
+    await db.insertVehicle({
         placa: placa,
         chassi: chassi,
         renavam: renavam,
@@ -90,7 +90,7 @@ app.put('/veiculos/:id', async function (req, res) {
     const {
         id
     } = req.params;
-    const veiculo = await db.selectCustomer(id);
+    const veiculo = await db.selectVehicle(id);
 
     if (!veiculo[0]) return res.status(204).json();
 
@@ -103,7 +103,7 @@ app.put('/veiculos/:id', async function (req, res) {
         ano
     } = req.body;
 
-    await db.updateCustomer(id, {
+    await db.updateVehicle(id, {
         placa: placa,
         chassi: chassi,
         renavam: renavam,
@@ -121,9 +121,9 @@ app.delete('/veiculos/:id', async function (req, res) {
     const {
         id
     } = req.params;
-    const veiculo = await db.selectCustomer(id);
+    const veiculo = await db.selectVehicle(id);
 
-    await db.deleteCustomer(id);
+    await db.deleteVehicle(id);
 
     res.json(veiculo);
 
