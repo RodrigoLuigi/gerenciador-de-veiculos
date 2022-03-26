@@ -1,9 +1,7 @@
 const express = require('express');
 const db = require("./db.js");
 const cors = require('cors');
-const {
-    use
-} = require('express/lib/application');
+const { use } = require('express/lib/application');
 
 const app = express();
 const port = 3000; //porta padrão
@@ -11,7 +9,7 @@ const port = 3000; //porta padrão
 app.use(express.json());
 
 app.use((req, res, next) => {
-   // console.log('Acessou o Middlewere!');
+    console.log('Acessou o Middlewere!');
     res.header("Access-Control-Allow-Origin", "*");
     app.use(cors());
     next();
@@ -20,7 +18,8 @@ app.use((req, res, next) => {
 //definindo as rotas
 const router = express.Router();
 router.get('/', (req, res) => res.json({
-    message: 'Funcionando!'
+    message: 'Funcionando!',
+    criador: 'Rodrigo Luigi',
 }));
 app.use('/', router);
 
@@ -123,8 +122,9 @@ app.delete('/veiculos/:id', async function (req, res) {
     } = req.params;
     const veiculo = await db.selectVehicle(id);
 
+    if (!veiculo[0]) return res.status(204).json();
+
     await db.deleteVehicle(id);
 
     res.json(veiculo);
-
 });

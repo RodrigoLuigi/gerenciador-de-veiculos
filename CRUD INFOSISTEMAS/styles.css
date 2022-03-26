@@ -1,14 +1,18 @@
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+/*====================== BASE ======================*/
+
+body {
   background-color: rgba(146, 192, 253, 0.287);
 }
 
-header nav{
+/*====================== NAVBAR ======================*/
+header nav {
   background-color: #fff;
   box-shadow: 0 0 14px 2px rgba(146, 192, 253, 0.623);
 
@@ -26,12 +30,14 @@ header nav{
   width: 100%;
 }
 
-table{
-  
+/*====================== MAIN ======================*/
+
+table {
+
   border-radius: 15px;
 }
 
-th { 
+th {
   font-size: 18px;
 }
 
@@ -41,6 +47,8 @@ td {
   color: rgb(133, 133, 133);
 
 }
+
+/*====================== MODAL CADASTRO ======================*/
 
 input {
   height: 40px;
@@ -53,18 +61,21 @@ input {
   font-size: 16px;
 }
 
-#inputPlaca{
+#inputPlaca {
   width: 30%;
 }
-#inputChassi{
+
+#inputChassi {
   width: 69%;
 }
+
 #inputRenavam,
-#inputMarca{
+#inputMarca {
   width: 49%;
 }
+
 #inputModelo,
-#inputAno{
+#inputAno {
   width: 50%;
 }
 
@@ -73,9 +84,10 @@ input {
   margin-left: 20px;
 }
 
-.buttonEdit{
+.buttonEdit {
   font-weight: bold;
 }
-.btn-primary{
-font-weight: bold;
+
+.btn-primary {
+  font-weight: bold;
 }
