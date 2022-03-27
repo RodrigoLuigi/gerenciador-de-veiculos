@@ -54,7 +54,7 @@ Também pode-se executar um teste geral de todas as requisições, para isso , a
 
  A conexão com o Banco de dados foi feita através do Node.js, a construção da API com Express, e foi configurado o CORS para liberação dos recursos da API.
 
- ### npm install cors
+ ### npm install --save cors
 
 -O CORS (Cross-origin Resource Sharing) é um mecanismo utilizado pelos navegadores para compartilhar recursos entre diferentes origens. O CORS é uma especificação do W3C e faz uso de headers do HTTP para informar aos navegadores se determinado recurso pode ser ou não acessado.
 
