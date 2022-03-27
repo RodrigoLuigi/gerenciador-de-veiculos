@@ -195,5 +195,21 @@ function excluir(id) {
 
 }
 
+function pesquisar(){}
+
+/* Retorna os valores Default do formulário de cadastro*/
+function fechar(){
+  editId = null;
+  document.getElementById('TituloModalCentralizado').innerText = 'Novo Cadastro'
+  document.getElementById('btn-primary').innerText = 'Cadastrar'
+
+  document.getElementById('inputPlaca').value = '';
+  document.getElementById('inputChassi').value = '';
+  document.getElementById('inputRenavam').value = '';
+  document.getElementById('inputModelo').value = '';
+  document.getElementById('inputMarca').value = '';
+  document.getElementById('inputAno').value = '';
+}
+
 
 listaVeiculos();

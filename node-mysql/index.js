@@ -128,3 +128,5 @@ app.delete('/veiculos/:id', async function (req, res) {
 
     res.json(veiculo);
 });
+
+module.exports = app;

@@ -26,6 +26,8 @@ try {
   
 }
 
+connect();
+
 // Traz os dados de todos os veiculos de dentro do banco de dados
 async function selectVehicles() {
   const conn = await connect();

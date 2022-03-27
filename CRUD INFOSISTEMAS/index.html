@@ -16,9 +16,8 @@
 <body>
   <!-- CABEÇALHO / LOGO / PESQUISA -->
   <header>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand logo ml-5"><img src="logo.png" alt="Logo redondo com duas camadas de cores">CRUD INFO
-        SISTEMAS</a>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand logo ml-5"><img src="assets/images/logo.png" alt="Logo redondo com duas camadas de cores"></a>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
@@ -53,14 +52,19 @@
     </div>
   </main>
 
-  <!-- Modal / formulário de cadastro -->
+  <!-- RODAPÉ -->
+  <footer class="bg-dark">
+    <span>Todos os direitos reservados. Design by Rodrigo Luigi</span>
+  </footer>
+
+  <!-- MODAL / FORMULÁRIO DE CADASTRO -->
   <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
     aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="TituloModalCentralizado">Novo Cadastro</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" onclick="fechar()">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -78,21 +82,12 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="fechar()">Fechar</button>
           <button type="button" class="btn btn-primary" id="btn-primary" onclick="cadastrar()">Cadastrar</button>
         </div>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
 
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -8,26 +8,16 @@
 /*====================== BASE ======================*/
 
 body {
-  background-color: rgba(146, 192, 253, 0.287);
+  background-color: rgba(191, 191, 191, 0.287);
 }
 
-/*====================== NAVBAR ======================*/
+/*====================== NAVBAR ====================*/
 header nav {
   background-color: #fff;
-  box-shadow: 0 0 14px 2px rgba(146, 192, 253, 0.623);
+  box-shadow: 0 0 14px 2px rgba(0, 0, 0, 0.823);
 
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-
-.logo {
-  width: 100px;
-  height: 90px;
-}
-
-.logo img {
-  padding: 10px;
-  width: 100%;
 }
 
 /*====================== MAIN ======================*/
@@ -41,14 +31,30 @@ th {
   font-size: 18px;
 }
 
-
 td {
   font-weight: 600;
   color: rgb(133, 133, 133);
-
 }
 
-/*====================== MODAL CADASTRO ======================*/
+/*====================== FOOTER  ======================*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding: .55rem;
+
+  text-align: center;
+  color: #ddd;
+
+  box-shadow: 0 0 14px 2px rgba(0, 0, 0, 0.823);
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/*====================== MODAL CADASTRO ===============*/
 
 input {
   height: 40px;
