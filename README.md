@@ -1,4 +1,4 @@
-COMO RODAR O PROJETO BAIXADO
+CONFIGURAÇÔES
 
 <li> Instalar todas as dependencias indicada pelo package.json
 
