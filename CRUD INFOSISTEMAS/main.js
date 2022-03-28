@@ -195,10 +195,10 @@ function excluir(id) {
 
 }
 
-function pesquisar(){}
+function pesquisar() {}
 
 /* Retorna os valores Default do formulário de cadastro*/
-function fechar(){
+function fechar() {
   editId = null;
   document.getElementById('TituloModalCentralizado').innerText = 'Novo Cadastro'
   document.getElementById('btn-primary').innerText = 'Cadastrar'
@@ -211,5 +211,29 @@ function fechar(){
   document.getElementById('inputAno').value = '';
 }
 
+/* Rotarna valores Default do imput*/
+function fecharSave(){
+  document.getElementById('titulo').value = '';
+}
+
+/* Salva lista de veiculos em arquivo .txt*/
+const salvar = async function() {
+  const dados = await fetch(url);
+  const data = await dados.json();
+  JSON.stringify(data)
+  let msg = ''
+  for(const veiculo of data){
+    msg += `
+    ID: '${veiculo.id}'  PLACA: '${veiculo.placa}'  CHASSI: '${veiculo.chassi}' MODELO: '${veiculo.modelo}'  MARCA: '${veiculo.marca}' ANO: '${veiculo.ano}'  /`;
+  }
+
+  let titulo = document.getElementById("titulo").value;
+  let blob = new Blob([msg], {
+    type: "text/plain;charset=utf-8"
+  });
+  saveAs(blob, titulo + ".txt");
+
+  location.reload();
+}
 
 listaVeiculos();

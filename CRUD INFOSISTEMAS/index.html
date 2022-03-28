@@ -17,7 +17,8 @@
   <!-- CABEÇALHO / LOGO / PESQUISA -->
   <header>
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand logo ml-5"><img src="assets/images/logo.png" alt="Logo redondo com duas camadas de cores"></a>
+      <a class="navbar-brand logo ml-5"><img src="assets/images/logo.png"
+          alt="Logo redondo com duas camadas de cores"></a>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
@@ -49,6 +50,41 @@
 
         </tbody>
       </table>
+
+      <!-- Botão para acionar modal -->
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal-Save">
+        SALVAR
+      </button>
+
+      <!-- Modal / SALVAR -->
+      <div class="modal fade" id="Modal-Save" tabindex="-1" role="dialog"
+        aria-labelledby="TituloModalCentralizadoo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="TituloModalCentralizadoo">SALVAR LISTA EM ARQUIVO .txt</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" onclick="fecharSave()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+
+              <div>
+                <label for="input-fileName">Nome do Arquivo</label><br/>
+                <input style="width: 100%;" type="text" id="titulo" placeholder="Nome do Arquivo">
+              </div>
+              
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="fecharSave()">Fechar</button>
+              <button type="button" class="btn btn-primary" onclick="salvar()">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -90,7 +126,7 @@
   </div>
 
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- jQuery,  Popper.js,  Bootstrap JS, FileSave.js, main.js -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
@@ -100,6 +136,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
+  <script src="FileSaver.min.js"></script>
   <script src="main.js"></script>
 </body>
 
