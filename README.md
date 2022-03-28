@@ -1,5 +1,3 @@
-<img src="CRUD INFOSISTEMAS\assets\images\logo.png" align="center">
-
 
 CONFIGURAÇÔES
 
