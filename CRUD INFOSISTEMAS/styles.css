@@ -23,7 +23,7 @@ header nav {
 /*====================== MAIN ======================*/
 
 table {
-
+  box-shadow: 0 2px 4px .25px rgba(0, 0, 0, 0.426);
   border-radius: 15px;
 }
 
