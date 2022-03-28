@@ -195,7 +195,25 @@ function excluir(id) {
 
 }
 
-function pesquisar() {}
+/* Pesquisa veiculo pelo ID*/
+const pesquisar = async function () {
+  const pesquisa = document.getElementById('imputPesquisa').value;
+  const urlPesquisa = `${url}/${pesquisa}`;
+
+  const dados = await fetch(urlPesquisa);
+  const endereco = await dados.json();
+
+  if (pesquisa !== '') {
+    for (const data of endereco) {
+
+      const string = `ID: '${data.id}'  /  PLACA: '${data.placa}'  /  CHASSI: '${data.chassi}'  /  RENAVAM: '${data.renavam}'  /  MODELO: '${data.modelo}'  /  MARCA: '${data.marca}'  /  ANO: '${data.ano}'`
+      document.getElementById('pesquisaId').innerText = string;
+    }
+  } else {
+    document.getElementById('pesquisaId').innerText = 'endereco vazio';
+  }
+  document.getElementById('imputPesquisa').value = '';
+}
 
 /* Retorna os valores Default do formulário de cadastro*/
 function fechar() {
@@ -212,17 +230,17 @@ function fechar() {
 }
 
 /* Rotarna valores Default do imput*/
-function fecharSave(){
+function fecharSave() {
   document.getElementById('titulo').value = '';
 }
 
 /* Salva lista de veiculos em arquivo .txt*/
-const salvar = async function() {
+const salvar = async function () {
   const dados = await fetch(url);
   const data = await dados.json();
   JSON.stringify(data)
   let msg = ''
-  for(const veiculo of data){
+  for (const veiculo of data) {
     msg += `
     ID: '${veiculo.id}'  PLACA: '${veiculo.placa}'  CHASSI: '${veiculo.chassi}' MODELO: '${veiculo.modelo}'  MARCA: '${veiculo.marca}' ANO: '${veiculo.ano}'  /`;
   }

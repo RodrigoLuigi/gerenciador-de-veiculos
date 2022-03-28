@@ -9,19 +9,42 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <title>CRUD Veiculos - INFO SISTEMAS</title>
 </head>
 
 <body>
   <!-- CABEÇALHO / LOGO / PESQUISA -->
   <header>
+    <!-- Modal Pesquisa -->
+    <div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="TituloModalLongoExemplo">Resultado da pesquisa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h6 id="pesquisaId"></h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand logo ml-5"><img src="assets/images/logo.png"
           alt="Logo redondo com duas camadas de cores"></a>
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+        <input id="imputPesquisa" class="form-control mr-sm-2" type="search" placeholder="Digite o ID do Veiculo"
+          aria-label="Pesquisar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal"
+          data-target="#ModalLongoExemplo" onclick="pesquisar()">Pesquisar</button>
       </form>
     </nav>
   </header>
@@ -57,8 +80,8 @@
       </button>
 
       <!-- Modal / SALVAR -->
-      <div class="modal fade" id="Modal-Save" tabindex="-1" role="dialog"
-        aria-labelledby="TituloModalCentralizadoo" aria-hidden="true">
+      <div class="modal fade" id="Modal-Save" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizadoo"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -71,14 +94,15 @@
             <div class="modal-body">
 
               <div>
-                <label for="input-fileName">Nome do Arquivo</label><br/>
+                <label for="input-fileName">Nome do Arquivo</label><br />
                 <input style="width: 100%;" type="text" id="titulo" placeholder="Nome do Arquivo">
               </div>
-              
+
             </div>
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="fecharSave()">Fechar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                onclick="fecharSave()">Fechar</button>
               <button type="button" class="btn btn-primary" onclick="salvar()">Salvar</button>
             </div>
           </div>
@@ -126,18 +150,22 @@
   </div>
 
 
-  <!-- jQuery,  Popper.js,  Bootstrap JS, FileSave.js, main.js -->
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
+  <!-- Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
+  <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
-  <script src="FileSaver.min.js"></script>
-  <script src="main.js"></script>
+  <!-- FileSave.js -->
+  <script src="js/FileSaver.min.js"></script>
+  <!-- main.js -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
