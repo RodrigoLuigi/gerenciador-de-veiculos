@@ -55,10 +55,10 @@ describe('Teste de API deve retornar Status: 200 OK', () => {
       .send({
         placa: 'Teste',
         chassi: 'teste',
-        renavam: 000000,
+        renavam: '000000',
         modelo: 'teste',
         marca: 'teste',
-        ano: 0000
+        ano: '0000'
       })
       .end((err, res) => {
         expect(res).to.have.status(200);
@@ -92,10 +92,10 @@ describe('Teste de API deve retornar Status: 204 No Content', () => {
       .send({
         placa: 'Teste',
         chassi: 'teste',
-        renavam: 000000,
+        renavam: '000000',
         modelo: 'teste',
         marca: 'teste',
-        ano: 0000
+        ano: '0000'
       })
       .end((err, res) => {
         expect(res).to.have.status(204);
