@@ -1,4 +1,4 @@
-# <img id="top" width="100%" src="CRUD INFOSISTEMAS/assets/images/logo.png" align="center">
+# <img id="top" width="100%" height="120px" src="CRUD INFOSISTEMAS/assets/images/logo.png" align="center">
 
 _**Gerenciador de Veículos**_
 
