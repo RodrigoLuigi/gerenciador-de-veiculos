@@ -14,8 +14,8 @@
 ## Screenshots
 
 <div align="center">
+  <img src="assets/images/image1.png" width="270px" height="200px">
   <img src="assets/images/image.png" width="270px" height="200px">
-  <img src="assets/images/image-1.png" width="270px" height="200px">
   <img src="assets/images/image-2.png" width="270px" height="200px">
 </div>
 
