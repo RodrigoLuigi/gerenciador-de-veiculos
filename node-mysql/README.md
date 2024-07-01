@@ -1,4 +1,4 @@
-# <h1 id="top" align="center">Food**Explorer** API - Backend</h1>
+# <h1 id="top" align="center">Gerenciador de Veículos - API &nbsp; 🚗</h1>
 
 <p align="center">
   <a href="#sobre">Sobre</a> &#xa0; | &#xa0;
@@ -15,13 +15,11 @@
 
 _**obs. precisa ser refatorado! aplicar padrões de projeto mvc, solid e clean-code**_
 
-📌 Gerenciador de Veículos é uma aplicação para realizar as operações básicas de um sistema CRUD. Uma aplicação de ponta a ponta com Front-end e Back-end.
+📌 Aplicação para manipulação de dados inseridos em uma tabela através de um formulário, foi utilizado Banco de dados MySQL para armazenar informações de cada veiculo, e uma API para realizar requisições (HTTP) para o Front-end (html) , e dessa forma manipular os dados, criando novos cadastros (CREATE) , listando os dados cadastrados na tabela (READ) , atualizando os dados (UPDATE) e excluindo dados (DELETE).
 
-Aplicação para manipulação de dados inseridos em uma tabela através de um formulário, foi utilizado Banco de dados MySQL para armazenar informações de cada veiculo, e uma API para realizar requisições (HTTP) para o Front-end (html) , e dessa forma manipular os dados, criando novos cadastros (CREATE) , listando os dados cadastrados na tabela (READ) , atualizando os dados (UPDATE) e excluindo dados (DELETE).
+A conexão com o Banco de dados foi feita através do Node.js, a construção da API com Express, e foi configurado o CORS para liberação dos recursos da API.
 
- A conexão com o Banco de dados foi feita através do Node.js, a construção da API com Express, e foi configurado o CORS para liberação dos recursos da API.
-
-Desenvolvido utilizando **Node.js**, Criação de banco de dados utilizando **MySQL**.
+Desenvolvido utilizando **Node.js**, **Express.js** e criação do banco de dados utilizando **MySQL**.
 
 ## :gear: Features
 

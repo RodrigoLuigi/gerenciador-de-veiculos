@@ -1,4 +1,4 @@
-# <img src="CRUD INFOSISTEMAS/assets/images/logo.png" align="center" alt="Logo Explorer em formato de Hexagono Azul com detalhes azul claro"> 
+# <img id="top" width="100%" src="CRUD INFOSISTEMAS/assets/images/logo.png" align="center">
 
 _**Gerenciador de Veículos**_
 
